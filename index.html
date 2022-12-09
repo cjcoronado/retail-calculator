@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+<body>
+    <form>
+        Enter the Number of Cassettes in Production: <input type="text" id="cassettes" /><br>
+        Enter the Manufacturing Costs: <input type="text" id="costs" /><br>
+        Enter Your Desired Profit Margin: <input type="text" id="margin" />%<br>
+
+        <input type="button" onClick="getRetail()" Value="Get Retail Price" />
+    </form>
+    
+    <p>Sell each tape for: $<span id = "result"></span>
+    </p>
+
+    <script type="text/javascript">
+
+     function getRetail()
+     {
+        num1 = document.getElementById("cassettes").value;
+        num2 = document.getElementById("costs").value;
+        num3 = document.getElementById("margin").value;
+        document.getElementById("result").innerHTML = ((num2 / num1) * ((1 + (num3 / 100))));
+    } 
+</script>
+</body>
+</html>
